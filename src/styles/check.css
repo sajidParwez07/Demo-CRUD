@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    #check-card{
+        width: 50%;
+    }
+    #check-table{
+        width: 50%;
+    }
+}
