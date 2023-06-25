@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import '../styles/check.css';
 
 const Edit = () => {
     const [name, setName] = useState("");
     const{id}= useParams();
+    const navigate = useNavigate();
 
     const getEditData = () =>{
         fetch("https://mock-76x7.onrender.com/data/"+id)
@@ -31,7 +32,7 @@ const Edit = () => {
         .then(Response=>Response.json())
         .then(serRes=>{
             alert("Updated");
-            window.location.href="/";
+            navigate('/');
         })
     }
 
